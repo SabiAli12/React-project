@@ -21,13 +21,7 @@ const Myapp = () => {
         setData(jsonData)
         if(search ==""){
           alert("Enter city name")
-        }
-        // if (jsonData.cod =='404') {
-        //   setError ("please enter city name")
-        // }
-        // setSearch("")
-      }
-     
+      
   return (
     <>
      <div className="container">
@@ -36,22 +30,12 @@ const Myapp = () => {
             <button onClick={myFun}> <i class="fa fa-search"> </i></button>
              </div>
              <div>
-              {/* {
-                error ?
-                <div>
-                  <p>{error}</p>
-                  <img src={err}  />
-                </div> :""
-              } */}
+             
              {
               data && data.weather ?
               <div className='weather'>
                 <h2> {data.name}</h2>
-                {/* <img src={data.weather [0].main == "Clouds" ? Cloud :""} />
-                <img src={data.weather [0].main == "Rains" ? Rain:""  } />
-                <img src={data.weather [0].main == "Clear" ? Clear :"" } />
-                <img src={data.weather [0].main == "Mist" ? Mist :"" } />
-                <img src={data.weather [0].main == "Haze" ?Haze:"" } /> */}
+                
                 <h2> { Math.trunc(data.main.temp)}°C</h2>
                 <p> {data.weather[0].description}</p>
               </div> : ""
